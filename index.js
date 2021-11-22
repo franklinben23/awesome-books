@@ -4,7 +4,8 @@ function adder(){
   const book = {};
   book.title = document.getElementById('title').value;
   book.author = document.getElementById('author').value;
-  library.push(book);
+  return book
+  //library.push(book);
 }
 
 function addBook(bookObj) {
@@ -13,3 +14,9 @@ function addBook(bookObj) {
   book.innerHTML = bookObj.title
   bookList.appendChild(book)
 }
+
+let addbtn = document.getElementById('add-btn');
+addbtn.addEventListener('click', () => {
+  let book = adder();
+  addBook(book)
+})
