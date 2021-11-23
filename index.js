@@ -1,23 +1,10 @@
+/* eslint-disable max-classes-per-file */
 class Book {
   constructor(title, author, id) {
     this.title = title;
     this.author = author;
     this.id = id;
   }
-}
-
-function updateDisplay(bookObj) {
-  const bookList = document.getElementById('book-list');
-  const book = document.createElement('LI');
-  book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
-  const deletetBtn = document.createElement('button');
-  deletetBtn.innerHTML = 'Delete';
-  deletetBtn.addEventListener('click', () => {
-    library.removeBook(bookObj.id);
-  });
-
-  book.appendChild(deletetBtn);
-  bookList.appendChild(book);
 }
 
 class Library {
@@ -46,7 +33,7 @@ class Library {
     deletetBtn.addEventListener('click', () => {
       this.removeBook(bookObj.id);
     });
-  
+
     book.appendChild(deletetBtn);
     bookList.appendChild(book);
   }
