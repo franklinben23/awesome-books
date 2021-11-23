@@ -6,8 +6,22 @@ class Book {
   }
 }
 
+function updateDisplay(bookObj) {
+  const bookList = document.getElementById('book-list');
+  const book = document.createElement('LI');
+  book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
+  const deletetBtn = document.createElement('button');
+  deletetBtn.innerHTML = 'Delete';
+  deletetBtn.addEventListener('click', () => {
+    library.removeBook(bookObj.id);
+  });
+
+  book.appendChild(deletetBtn);
+  bookList.appendChild(book);
+}
+
 class Library {
-  constructor(){
+  constructor() {
     this.data = [];
   }
 
