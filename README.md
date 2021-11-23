@@ -1,43 +1,15 @@
-1:38 PM (0 minutes ago)
-to franklinbenjamin032
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Awesome books
 
-> One paragraph statement about the project.
+> In this project, a basic website that allows users to add/remove books from a list is implemented. This is achieve  by using JavaScript objects and arrays. The DOM is modified dynamically and add basic events.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+![screenshot](./assets/basicUI.PNG)
 
 ## Built With
 
 - HTML
-- JAVASCRIPT
-- Css
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+- JavaScript
 
 ## Authors
 
@@ -48,9 +20,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@John-Arboleda](https://github.com/John-Arboleda)
+- Twitter: [@John_J_Arboleda](https://twitter.com/John_J_Arboleda)
+- LinkedIn: [@john-arboleda](https://www.linkedin.com/in/john-arboleda/)
 
 ## 🤝 Contributing
 
@@ -61,12 +33,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
