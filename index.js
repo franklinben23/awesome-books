@@ -1,6 +1,6 @@
 let library = [];
 
-function adder () {
+function adder() {
   const book = {};
   book.title = document.getElementById('title').value;
   book.author = document.getElementById('author').value;
@@ -28,7 +28,7 @@ function addBook(bookObj) {
   deletetBtn.innerHTML = 'Delete';
   deletetBtn.addEventListener('click', () => {
     removeBook(bookObj.id);
-  })
+  });
 
   book.appendChild(deletetBtn);
   bookList.appendChild(book);
@@ -40,19 +40,19 @@ addbtn.addEventListener('click', () => {
   library.push(book);
   addBook(book);
   localStorage.setItem('library', JSON.stringify(library));
-})
+});
 
-function saver () {
+function saver() {
   library.forEach((book) => {
     addBook(book);
-  })
+  });
 }
 
 window.onload = function () {
   library = JSON.parse(localStorage.getItem('library' || '[]'));
-  if (library === null){
+  if (library === null) {
     library = [];
     return;
   }
   saver();
-}
+};
