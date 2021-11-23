@@ -14,13 +14,33 @@ class Library {
   addBook(book) {
     this.data.push(book);
     localStorage.setItem('library', JSON.stringify(this.data));
-    updateDisplay(book);
+    this.updateDisplay(book);
   }
 
   removeBook(id) {
     this.data = this.data.filter((bookObj) => bookObj.id !== id);
     localStorage.setItem('library', JSON.stringify(this.data));
     window.location.reload();
+  }
+
+  updateDisplay(bookObj) {
+    const bookList = document.getElementById('book-list');
+    const book = document.createElement('LI');
+    book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
+    const deletetBtn = document.createElement('button');
+    deletetBtn.innerHTML = 'Delete';
+    deletetBtn.addEventListener('click', () => {
+      this.removeBook(bookObj.id);
+    });
+  
+    book.appendChild(deletetBtn);
+    bookList.appendChild(book);
+  }
+
+  saver() {
+    this.data.forEach((book) => {
+      this.updateDisplay(book);
+    });
   }
 }
 
@@ -31,7 +51,7 @@ function adder() {
   const author = document.getElementById('author');
   let id;
   if (library.data.length > 0) {
-    const lastItem = library[library.data.length - 1];
+    const lastItem = library.data[library.data.length - 1];
     const lastIndex = lastItem.id;
     id = lastIndex + 1;
   } else {
@@ -43,33 +63,12 @@ function adder() {
   return book;
 }
 
-function updateDisplay(bookObj) {
-  const bookList = document.getElementById('book-list');
-  const book = document.createElement('LI');
-  book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
-  const deletetBtn = document.createElement('button');
-  deletetBtn.innerHTML = 'Delete';
-  deletetBtn.addEventListener('click', () => {
-    library.removeBook(bookObj.id);
-  });
-
-  book.appendChild(deletetBtn);
-  bookList.appendChild(book);
-}
-
 const addbtn = document.getElementById('add-btn');
 addbtn.addEventListener('click', () => {
   const book = adder();
   library.addBook(book);
-  addBook(book);
   localStorage.setItem('library', JSON.stringify(library.data));
 });
-
-function saver() {
-  library.data.forEach((book) => {
-    updateDisplay(book);
-  });
-}
 
 window.onload = function () {
   library.data = JSON.parse(localStorage.getItem('library' || '[]'));
@@ -77,5 +76,5 @@ window.onload = function () {
     library.data = [];
     return;
   }
-  saver();
+  library.saver();
 };
