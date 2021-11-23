@@ -1,16 +1,27 @@
 let library = [];
 
+class Book {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+}
+
 function adder() {
-  const book = {};
-  book.title = document.getElementById('title').value;
-  book.author = document.getElementById('author').value;
+  const title = document.getElementById('title');
+  const author = document.getElementById('author');
+  let id;
   if (library.length > 0) {
     const lastItem = library[library.length - 1];
     const lastIndex = lastItem.id;
-    book.id = lastIndex + 1;
+    id = lastIndex + 1;
   } else {
-    book.id = 1;
+    id = 1;
   }
+  const book = new Book(title.value, author.value, id);
+  title.value = '';
+  author.value = '';
   return book;
 }
 
