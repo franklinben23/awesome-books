@@ -1,0 +1,53 @@
+main {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+}
+
+.inpt {
+  display: block;
+  margin-left: 250px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  margin: 7px 0 7px 0;
+  border: black 4px solid;
+  width: 300px;
+  padding: 3px;
+}
+
+.button {
+  margin-right: 20px;
+  background-color: white;
+  width: 65px;
+  border: black 2px solid;
+  box-shadow: 4px 2px 2px black;
+}
+
+#book-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: black 2px solid;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 5px;
+}
+
+.book-item:nth-child(odd) {
+  background: lightgrey;
+}
+
+hr {
+  border: black 2px solid;
+  width: 80px;
+}

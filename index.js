@@ -32,9 +32,11 @@ class Library {
   updateDisplay(bookObj) {
     const bookList = document.getElementById('book-list');
     const book = document.createElement('LI');
-    book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
+    book.innerHTML = `${bookObj.title} by ${bookObj.author}`;
+    book.classList.add('book-item');
     const deletetBtn = document.createElement('button');
     deletetBtn.innerHTML = 'Delete';
+    deletetBtn.classList.add('button');
     deletetBtn.addEventListener('click', () => {
       this.removeBook(bookObj.id);
     });
