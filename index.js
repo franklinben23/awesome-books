@@ -33,10 +33,10 @@ class Library {
     const bookList = document.getElementById('book-list');
     const book = document.createElement('LI');
     book.innerHTML = `${bookObj.title} by ${bookObj.author}`;
-    book.classList.add("book-item");
+    book.classList.add('book-item');
     const deletetBtn = document.createElement('button');
     deletetBtn.innerHTML = 'Delete';
-    deletetBtn.classList.add("button");
+    deletetBtn.classList.add('button');
     deletetBtn.addEventListener('click', () => {
       this.removeBook(bookObj.id);
     });
