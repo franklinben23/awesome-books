@@ -6,7 +6,7 @@ main {
 
 .inpt {
   display: block;
-  align-self: center;
+  margin-left: 250px;
 }
 
 .form {
@@ -23,8 +23,7 @@ main {
 }
 
 .button {
-  align-self: flex-end;
-  margin-right: 50px;
+  margin-right: 20px;
   background-color: white;
   width: 65px;
   border: black 2px solid;
