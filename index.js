@@ -3,7 +3,7 @@ class Library {
     this.data = [];
   }
 
-  createBook (title, author) {
+  createBook(title, author) {
     const book = {};
     book.title = title;
     book.author = author;
@@ -63,7 +63,7 @@ addbtn.addEventListener('click', () => {
   author.value = '';
 });
 
-window.onload = function () {
+window.onload = () => {
   library.data = JSON.parse(localStorage.getItem('library' || '[]'));
   if (library.data === null) {
     library.data = [];
