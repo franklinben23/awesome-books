@@ -1,15 +1,20 @@
-/* eslint-disable max-classes-per-file */
-class Book {
-  constructor(title, author, id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
-  }
-}
-
 class Library {
   constructor() {
     this.data = [];
+  }
+
+  createBook (title, author) {
+    const book = {};
+    book.title = title;
+    book.author = author;
+    if (this.data.length > 0) {
+      const lastItem = this.data[this.data.length - 1];
+      const lastIndex = lastItem.id;
+      book.id = lastIndex + 1;
+    } else {
+      book.id = 1;
+    }
+    return book;
   }
 
   addBook(book) {
@@ -47,28 +52,15 @@ class Library {
 
 const library = new Library();
 
-function adder() {
-  const title = document.getElementById('title');
-  const author = document.getElementById('author');
-  let id;
-  if (library.data.length > 0) {
-    const lastItem = library.data[library.data.length - 1];
-    const lastIndex = lastItem.id;
-    id = lastIndex + 1;
-  } else {
-    id = 1;
-  }
-  const book = new Book(title.value, author.value, id);
-  title.value = '';
-  author.value = '';
-  return book;
-}
-
 const addbtn = document.getElementById('add-btn');
 addbtn.addEventListener('click', () => {
-  const book = adder();
+  const title = document.getElementById('title');
+  const author = document.getElementById('author');
+  const book = library.createBook(title.value, author.value);
   library.addBook(book);
   localStorage.setItem('library', JSON.stringify(library.data));
+  title.value = '';
+  author.value = '';
 });
 
 window.onload = function () {
