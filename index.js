@@ -35,6 +35,7 @@ class Library {
     book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
     const deletetBtn = document.createElement('button');
     deletetBtn.innerHTML = 'Delete';
+    deletetBtn.classList.add("button");
     deletetBtn.addEventListener('click', () => {
       this.removeBook(bookObj.id);
     });
