@@ -1,6 +1,7 @@
 main {
   margin: auto;
   width: 400px;
+  text-align: center;
 }
 
 .inpt {
@@ -28,4 +29,26 @@ main {
   width: 65px;
   border: black 2px solid;
   box-shadow: 4px 2px 2px black;
+}
+
+#book-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: black 2px solid;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 5px;
+}
+
+.book-item:nth-child(odd) {
+  background: lightgrey;
+}
+
+hr {
+  border: black 2px solid;
+  width: 80px;
 }
