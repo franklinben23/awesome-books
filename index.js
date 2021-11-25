@@ -103,17 +103,12 @@ window.onload = () => {
 };
 
 function displayDate() {
-  const now = document.getElementById('date');
-  const date = Date.now();
-  const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-  };
-  now.innerHTML = new Intl.DateTimeFormat('en-US', options).format(date);
-}
+  const dateString = document.getElementById('date');
+
+  /* eslint-disable no-unused-vars */
+  
+  var DateTime = luxon.DateTime;
+  dateString.innerHTML = DateTime.now().toFormat('LLLL dd yyyy, t');
+};
 
 displayDate();

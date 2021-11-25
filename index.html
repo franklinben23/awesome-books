@@ -11,14 +11,18 @@
   <nav>
     <div class="navigation">
       <div class="nav-title">
-        <h4>Awesome Books</h4>
+        <h2>Awesome Books</h2>
       </div>
       <div class="nav-links">
-        <p class="nav-link-item" onclick="navigation('list')">List of books</p>
-        <span class="vertical-line"></span>
-        <p class="nav-link-item right" onclick="navigation('add')">add new </p>
-        <span class="vertical-line"></span>
-        <p class="nav-link-item" onclick="navigation('info')">Info</p>
+        <div class="link-container link-border">
+          <h4 class="nav-link-item" onclick="navigation('list')">List</h4>
+        </div>
+        <div class="link-container link-border">
+          <h4 class="nav-link-item right" onclick="navigation('add')">Add new </h4>
+        </div>
+        <div class="link-container"> 
+          <h4 class="nav-link-item" onclick="navigation('info')">Contact</h4>
+        </div>
       </div>
     </div>
   </nav>
@@ -40,10 +44,6 @@
         </ul>
       </div>
     </div>
-
-    <br>
-    <br>
-    <hr>
 
     <div class="none add-new">
       <h2>Add a new book</h2>
@@ -74,7 +74,7 @@
 
     </div>
   </footer>
-  <script src="https://cdn.tutorialjinni.com/luxon/2.0.2/cjs-browser/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js" integrity="sha256-vSborW7X9FSJg4XLi1TpwZKTlbN2nP6lHhC0XCNrVwU=" crossorigin="anonymous"></script>
   <script src="index.js"></script>
 </body>
 </html>

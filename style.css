@@ -16,35 +16,38 @@ main {
 
 .navigation {
   display: flex;
-  width: 800px;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav {
   border: black 3px solid;
+  width: 100%;
 }
 
 .nav-title {
   padding-left: 5px;
 }
 
+.nav-title h2 {
+  margin: 0;
+}
+
 .nav-links {
   display: flex;
-  justify-content: space-around;
-  width: 250px;
-  padding-top: 4px;
+  align-items: center;
 }
 
 .nav-link-item {
-  display: block;
+  margin: 10px;
 }
 
-.vertical-line {
+.link-container {
+  padding: 0 20px;
+}
+
+.link-border {
   border-right: black 3px solid;
-  padding-right: 10px;
-  height: 40%;
-  padding-top: 10px;
-  padding-bottom: 16px;
 }
 
 .inpt {
@@ -109,6 +112,6 @@ footer {
 }
 
 .date-container {
-  width: 800px;
+  width: 100%;
   text-align: right;
 }
