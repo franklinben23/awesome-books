@@ -8,7 +8,22 @@
   <title>Awesome Books</title>
 </head>
 <body>
+  <nav>
+    <div class="navigation">
+      <div class="nav-title">
+        <h4>Awesome Books</h4>
+      </div>
+      <div class="nav-links">
+        <p class="nav-link-item">List</p>
+        <span class="vertical-line"></span>
+        <p class="nav-link-item right">Books</p>
+        <span class="vertical-line"></span>
+        <p class="nav-link-item">Info</p>
+      </div>
+    </div>
+  </nav>
   <main>
+
     <h2>All awesome books</h2>
     <div id="list">
       <ul id="book-list">
@@ -18,13 +33,15 @@
     <br>
     <br>
     <hr>
-    <h2>Add a new book</h2>
-    <div id="form" class="form">
-      <form action="#" method="post" class="form-fld">
-        <input type="text" placeholder="Title" id="title" class="input-field inpt">
-        <input type="text" placeholder="Author" id="author" class="input-field inpt">
-        <button type="button" id="add-btn" class="inpt button">Add</button>
-      </form>
+    <div>
+      <h2>Add a new book</h2>
+      <div id="form" class="form">
+        <form action="#" method="post" class="form-fld">
+          <input type="text" placeholder="Title" id="title" class="input-field inpt">
+          <input type="text" placeholder="Author" id="author" class="input-field inpt">
+          <button type="button" id="add-btn" class="inpt button">Add</button>
+        </form>
+      </div>
     </div>
   </main>
   <script src="index.js"></script>

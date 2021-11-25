@@ -65,6 +65,19 @@ addbtn.addEventListener('click', () => {
   author.value = '';
 });
 
+// const navigation = (navpage) => {
+//   switch(navpage) {
+//     case :
+//       // code block
+//       break;
+//     case y:
+//       // code block
+//       break;
+//     default:
+//       // code block
+//   }
+// }
+
 window.onload = () => {
   library.data = JSON.parse(localStorage.getItem('library' || '[]'));
   if (library.data === null) {
