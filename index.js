@@ -106,7 +106,7 @@ function displayDate() {
   const dateString = document.getElementById('date');
 
   /* eslint-disable-next-line no-undef */
-  const DateTime = luxon.DateTime;
+  const { DateTime } = luxon;
   dateString.innerHTML = DateTime.now().toFormat('LLLL dd yyyy, t');
 }
 
