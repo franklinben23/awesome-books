@@ -90,3 +90,14 @@ hr {
   border: black 2px solid;
   width: 80px;
 }
+
+footer {
+  margin-top: 130px;
+  width: 100%;
+  padding-left: 30px;
+  border: black 3px solid;
+}
+
+.contact-info-content {
+  text-align: justify;
+}
