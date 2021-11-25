@@ -14,28 +14,30 @@
         <h4>Awesome Books</h4>
       </div>
       <div class="nav-links">
-        <p class="nav-link-item">List</p>
+        <p class="nav-link-item" onclick="navigation('list')">List of books</p>
         <span class="vertical-line"></span>
-        <p class="nav-link-item right">Books</p>
+        <p class="nav-link-item right" onclick="navigation('add')">add new </p>
         <span class="vertical-line"></span>
-        <p class="nav-link-item">Info</p>
+        <p class="nav-link-item" onclick="navigation('info')">Info</p>
       </div>
     </div>
   </nav>
   <main>
 
-    <h2>All awesome books</h2>
-    <div id="list">
-      <ul id="book-list">
-
-      </ul>
+    <div class="list">
+      <h2>All awesome books</h2>
+      <div id="list">
+        <ul id="book-list">
+  
+        </ul>
+      </div>
     </div>
 
     <br>
     <br>
     <hr>
 
-    <div>
+    <div class="none add-new">
       <h2>Add a new book</h2>
       <div id="form" class="form">
         <form action="#" method="post" class="form-fld">
@@ -46,7 +48,7 @@
       </div>
     </div>
 
-    <div class="contact-info">
+    <div class="contact-info none">
       <h2>Contact Information</h2>
       <div class="contact-info-content">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt illum itaque obcaecati sunt ratione corporis temporibus libero blanditiis quod alias aliquam amet qui possimus iusto molestiae distinctio commodi, odio delectus.</p>

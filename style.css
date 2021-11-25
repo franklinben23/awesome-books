@@ -4,6 +4,10 @@ body {
   align-items: center;
 }
 
+.none {
+  display: none;
+}
+
 main {
   margin: auto;
   width: 400px;

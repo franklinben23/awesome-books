@@ -65,18 +65,33 @@ addbtn.addEventListener('click', () => {
   author.value = '';
 });
 
-// const navigation = (navpage) => {
-//   switch(navpage) {
-//     case :
-//       // code block
-//       break;
-//     case y:
-//       // code block
-//       break;
-//     default:
-//       // code block
-//   }
-// }
+/* eslint-disable no-unused-vars */
+
+const navigation = (navpage) => {
+  const info = document.querySelector('.contact-info');
+  const add = document.querySelector('.add-new');
+  const list = document.querySelector('.list');
+  switch (navpage) {
+    case 'list':
+      info.classList.add('none');
+      add.classList.add('none');
+      list.classList.remove('none');
+      break;
+    case 'add':
+      info.classList.add('none');
+      list.classList.add('none');
+      add.classList.remove('none');
+      break;
+    case 'info':
+      add.classList.add('none');
+      list.classList.add('none');
+      info.classList.remove('none');
+      break;
+    default:
+  }
+};
+
+/* eslint-enable no-unused-vars */
 
 window.onload = () => {
   library.data = JSON.parse(localStorage.getItem('library' || '[]'));
