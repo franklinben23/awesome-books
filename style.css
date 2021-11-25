@@ -1,7 +1,53 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
+
 main {
   margin: auto;
   width: 400px;
   text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  border: black 3px solid;
+  width: 100%;
+}
+
+.nav-title {
+  padding-left: 5px;
+}
+
+.nav-title h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-item {
+  margin: 10px;
+}
+
+.link-container {
+  padding: 0 20px;
+}
+
+.link-border {
+  border-right: black 3px solid;
 }
 
 .inpt {
@@ -50,4 +96,22 @@ main {
 hr {
   border: black 2px solid;
   width: 80px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: 130px;
+  width: 100%;
+  padding-left: 30px;
+  border: black 3px solid;
+}
+
+.contact-info-content {
+  text-align: justify;
+}
+
+.date-container {
+  width: 100%;
+  text-align: right;
 }

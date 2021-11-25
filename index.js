@@ -65,6 +65,34 @@ addbtn.addEventListener('click', () => {
   author.value = '';
 });
 
+/* eslint-disable no-unused-vars */
+
+const navigation = (navpage) => {
+  const info = document.querySelector('.contact-info');
+  const add = document.querySelector('.add-new');
+  const list = document.querySelector('.list');
+  switch (navpage) {
+    case 'list':
+      info.classList.add('none');
+      add.classList.add('none');
+      list.classList.remove('none');
+      break;
+    case 'add':
+      info.classList.add('none');
+      list.classList.add('none');
+      add.classList.remove('none');
+      break;
+    case 'info':
+      add.classList.add('none');
+      list.classList.add('none');
+      info.classList.remove('none');
+      break;
+    default:
+  }
+};
+
+/* eslint-enable no-unused-vars */
+
 window.onload = () => {
   library.data = JSON.parse(localStorage.getItem('library' || '[]'));
   if (library.data === null) {
@@ -73,3 +101,13 @@ window.onload = () => {
   }
   library.saver();
 };
+
+function displayDate() {
+  const dateString = document.getElementById('date');
+
+  /* eslint-disable-next-line no-undef */
+  const { DateTime } = luxon;
+  dateString.innerHTML = DateTime.now().toFormat('LLLL dd yyyy, t');
+}
+
+displayDate();
