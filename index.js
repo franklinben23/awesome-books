@@ -100,21 +100,20 @@ window.onload = () => {
     return;
   }
   library.saver();
-  
 };
 
 function displayDate() {
-  let now = document.getElementById('date');
+  const now = document.getElementById('date');
   const date = Date.now();
-  var options = { 
+  const options = {
     weekday: 'long',
-    year: 'numeric', 
+    year: 'numeric',
     month: 'long',
-    day: 'numeric', 
+    day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
   };
   now.innerHTML = new Intl.DateTimeFormat('en-US', options).format(date);
-};
+}
 
 displayDate();
