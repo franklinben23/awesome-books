@@ -31,7 +31,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 200px;
+  width: 250px;
   padding-top: 4px;
 }
 
@@ -96,6 +96,8 @@ hr {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   margin-top: 130px;
   width: 100%;
   padding-left: 30px;
@@ -104,4 +106,9 @@ footer {
 
 .contact-info-content {
   text-align: justify;
+}
+
+.date-container {
+  width: 800px;
+  text-align: right;
 }
