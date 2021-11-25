@@ -105,10 +105,9 @@ window.onload = () => {
 function displayDate() {
   const dateString = document.getElementById('date');
 
-  /* eslint-disable no-unused-vars */
-  
-  var DateTime = luxon.DateTime;
+  /* eslint-disable-next-line no-undef */
+  const DateTime = luxon.DateTime;
   dateString.innerHTML = DateTime.now().toFormat('LLLL dd yyyy, t');
-};
+}
 
 displayDate();
